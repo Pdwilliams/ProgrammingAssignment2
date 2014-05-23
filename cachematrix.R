@@ -1,5 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## this code has two functions. One makes a special 'caching' matrix that will
+## cache the result of calling "solve" to inverte the matrix
+## the second function tests the "caching" mechanism by calling solve and
+## printing a message that tells when the result is coming from the cache
+## the second time it's called on the came 'cache matrix' is should use the
+## cached result from the first call
 
 ## This function takes an ordinary matrix and augments it with behavior in the
 ## form or functions that get and set the matrix and get
