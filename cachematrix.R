@@ -5,11 +5,12 @@
 ## the second time it's called on the came 'cache matrix' is should use the
 ## cached result from the first call
 
+################################################################################
 ## This function takes an ordinary matrix and augments it with behavior in the
 ## form or functions that get and set the matrix and get
 ## and set the inverse of the matrix. The "augmented" matrix is in the
 ## form of a list. This makes the matrix appear to have "state"
-
+################################################################################
 makeCacheMatrix <- function(x = matrix()) {
       
       ## initialize m to NULL
@@ -36,11 +37,12 @@ makeCacheMatrix <- function(x = matrix()) {
       list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
-
+###############################################################################
 ## This function takes a special "cache matrix" list created by the 
 ## makeCacheMatrix function and calculates the inverse of the matrix on the
-## first call to "getinverse" and returns the cached inverse for all subsequent
-## calls to "getinverse".
+## first call and returns the cached inverse for all subsequent
+## calls 
+##############################################################################
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
