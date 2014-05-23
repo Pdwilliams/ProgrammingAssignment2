@@ -11,14 +11,28 @@
 ## form of a list. This makes the matrix appear to have "state"
 
 makeCacheMatrix <- function(x = matrix()) {
+      
+      ## initialize m to NULL
       m <- NULL
+      
+      ## function to set the matrix (an reinitialize m to null so we don't
+      ## use the previously cached result)
       set <- function(y){
             x <<- y
             m <<- NULL
       }
+      
+      ## getter function to return the "internal" matrix
       get <- function() x
+      
+      ## function to set the inverse (assign to m)
       setinverse <- function(inv) m <<- inv
+      
+      ## function to get the current inverse value
       getinverse <- function() m
+      
+      ## return a list that exposes our functions
+      ## sort of reminds me of the "revealing module" pattern in Javascript
       list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
